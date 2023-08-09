@@ -76,6 +76,7 @@ body {
     list-style: none;
     font-size: 22px;
     text-align: center;
+    border: 0.01em solid white;
     border-radius: 10px;
     text-transform: capitalize;
     overflow: auto;

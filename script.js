@@ -12,5 +12,15 @@ function addItem() {
     const li = document.createElement("li");
     li.textContent = task;
 
-    listGroup.appendChild(li)
+
+
+    const insertFrist = listGroup.firstElementChild;
+    if(insertFrist == null){
+        listGroup.appendChild(li)
+    }else{
+        listGroup.insertBefore(li, insertFrist)
+    }
+
+    inValue.value = '';
+    inValue.focus()
 }

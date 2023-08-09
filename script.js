@@ -1,12 +1,12 @@
 console.warn("Octa Net Task No. 2");
 console.log("To Do List");
 
+var listGroup = document.getElementById("listGroup");
+var inValue = document.getElementById('addTask');
 
 function addItem() {
-    var inValue = document.getElementById('addTask');
     var task = inValue.value;
 
-    var listGroup = document.getElementById("listGroup")
 
     const li = document.createElement("li");
     li.textContent = task;
@@ -24,6 +24,8 @@ function addItem() {
 
     inValue.value = '';
     inValue.focus()
+
+    document.getElementById("count").innerHTML = listGroup.childElementCount;
 }
 
 let delBtn = document.querySelector('ul');
@@ -32,4 +34,10 @@ delBtn.addEventListener('click', (e) => {
     let li = e.target.parentNode;
 
     listGroup.removeChild(li);
+    document.getElementById("count").innerHTML = listGroup.childElementCount;
 })
+
+const clearAll = () =>{
+listGroup.innerHTML = '';
+document.getElementById("count").innerHTML = listGroup.childElementCount;
+}

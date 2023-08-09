@@ -104,5 +104,21 @@ body {
     float: right;
     color: rgb(255, 17, 0);
     border: 1px solid rgb(255, 17, 0);
+}
 
+.btn-group {
+    padding: 0.5em 0;
+}
+
+.btn-group button{
+padding: 8px;
+font-size: 20px;
+border: 1px solid orangered;
+border-radius: 4px;
+background-color: orangered;
+color: white;
+}
+
+.btn-group button:hover{
+    border-color: white;
 }

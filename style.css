@@ -1,5 +1,62 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#0291ff, #ffc800);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 60%;
+    height: 30rem;
+    max-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    border: 2px solid white;
+    box-shadow: 0 0 20px white;
+    border-radius: 1em;
+}
+
+.container .header {
+    width: 100%;
+    background-color: rgba(0, 255, 170, 0.404);
+    padding: 0.5em;
+    border-radius: 1em 1em 0 0;
+
+}
+
+.container .insert-task {
+    margin: 2em;
+    border: 1px solid #ff6702;
+    border-radius: 8px;
+}
+
+.container .insert-task input {
+    font-size: 20px;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    border: none;
+    border-radius: 8px 0 0 8px;
+}
+
+.container .insert-task button {
+    background-color: #0291ff;
+    color: white;
+    font-size: 24px;
+    padding: 5px;
+    border: none;
+    border-radius: 0 8px 8px 0;
 }

@@ -4,22 +4,27 @@ console.log("To Do List");
 var listGroup = document.getElementById("listGroup");
 var inValue = document.getElementById('addTask');
 
+
 function addItem() {
     var task = inValue.value;
+    console.log(task.length);
 
-
-    const li = document.createElement("li");
-    li.textContent = task;
-
-    const a = document.createElement('a');
-    a.textContent = 'X'
-    li.appendChild(a)
-
-    const insertFrist = listGroup.firstElementChild;
-    if (insertFrist == null) {
-        listGroup.appendChild(li)
+    if (task.length == 0) {
+        alert("Please enter task in the given feild");
     } else {
-        listGroup.insertBefore(li, insertFrist)
+        const li = document.createElement("li");
+        li.textContent = task;
+
+        const a = document.createElement('a');
+        a.textContent = 'X'
+        li.appendChild(a)
+
+        const insertFrist = listGroup.firstElementChild;
+        if (insertFrist == null) {
+            listGroup.appendChild(li)
+        } else {
+            listGroup.insertBefore(li, insertFrist)
+        }
     }
 
     inValue.value = '';
@@ -37,7 +42,13 @@ delBtn.addEventListener('click', (e) => {
     document.getElementById("count").innerHTML = listGroup.childElementCount;
 })
 
-const clearAll = () =>{
-listGroup.innerHTML = '';
-document.getElementById("count").innerHTML = listGroup.childElementCount;
+const clearAll = () => {
+    listGroup.innerHTML = '';
+    document.getElementById("count").innerHTML = listGroup.childElementCount;
 }
+
+inValue.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        addItem();
+    }
+});

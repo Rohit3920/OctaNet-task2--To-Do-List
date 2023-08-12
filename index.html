@@ -17,17 +17,17 @@
 <body>
 
     <div class="container">
-        <div class="header">
+        <div class="header" id="header">
             <h1><span id="count">0</span> Task List</h1>
 
             <div onclick="menu()" class="menu" id="menu">
                 <i class="fa-solid fa-bars"></i>
 
-                <ul class="menu-list hide" id="menu-list">
-                    <li class="defaultMode" onclick="">Default</li>
-                    <li class="lightMode" onclick="">Light Mode</li>
-                    <li class="darkMode" onclick="">Dark Mode</li>
-                </ul>
+                <ol class="menu-list hide" id="menu-list">
+                    <li class="defaultMode" onclick="defaultMode()">Default</li>
+                    <li class="lightMode" onclick="lightMode()">Light Mode</li>
+                    <li class="darkMode" onclick="darkMode()">Dark Mode</li>
+                </ol>
             </div>
         </div>
 

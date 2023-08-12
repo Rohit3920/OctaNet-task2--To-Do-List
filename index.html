@@ -19,6 +19,16 @@
     <div class="container">
         <div class="header">
             <h1><span id="count">0</span> Task List</h1>
+
+            <div onclick="menu()" class="menu" id="menu">
+                <i class="fa-solid fa-bars"></i>
+
+                <ul class="menu-list hide" id="menu-list">
+                    <li class="defaultMode" onclick="">Default</li>
+                    <li class="lightMode" onclick="">Light Mode</li>
+                    <li class="darkMode" onclick="">Dark Mode</li>
+                </ul>
+            </div>
         </div>
 
         <div class="insert-task">

@@ -52,3 +52,11 @@ inValue.addEventListener("keypress", function (event) {
         addItem();
     }
 });
+
+
+function menu() {
+    const menuList = document.getElementById('menu-list');
+
+    menuList.classList.toggle('hide')
+
+}

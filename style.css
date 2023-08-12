@@ -34,7 +34,76 @@ body {
     background-color: rgba(0, 255, 170, 0.404);
     padding: 0.5em;
     border-radius: 1em 1em 0 0;
+    display: inline;
+}
 
+.header h1 {
+    width: 80%;
+    float: left;
+    text-align: center;
+}
+
+.header .menu {
+    float: right;
+    width: 10%;
+    position: relative;
+}
+
+.header .menu i {
+    font-size: 24px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    color: black;
+    background-color: white;
+    opacity: 0.5;
+}
+
+.menu ul {
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.menu ul li {
+    padding: 6px;
+    width: 120px;
+    border-bottom: 1px solid black;
+    list-style: none;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.menu ul li:last-child {
+    border-radius: 0 0 10px 10px;
+    border: none;
+}
+
+.defaultMode {
+    border-radius: 10px 10px 0 0;
+    background: radial-gradient(#fbfbfb, #0291ff);
+    color: black;
+}
+
+.lightMode {
+    background-color: white;
+    color: black;
+}
+
+.darkMode {
+    background-color: black;
+    color: white;
+}
+
+
+.menu .menu-list {
+    position: absolute;
+    top: 38px;
+    left: 30px;
+    background-color: white;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
 }
 
 .container .insert-task {
@@ -92,7 +161,7 @@ body {
     text-align: left;
 }
 
-.box .list-item li a{
+.box .list-item li a {
     width: 1.2em;
     height: 1.2em;
     font-family: sans-serif;
@@ -110,15 +179,15 @@ body {
     padding: 0.5em 0;
 }
 
-.btn-group button{
-padding: 8px;
-font-size: 20px;
-border: 1px solid orangered;
-border-radius: 4px;
-background-color: orangered;
-color: white;
+.btn-group button {
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid orangered;
+    border-radius: 4px;
+    background-color: orangered;
+    color: white;
 }
 
-.btn-group button:hover{
+.btn-group button:hover {
     border-color: white;
 }

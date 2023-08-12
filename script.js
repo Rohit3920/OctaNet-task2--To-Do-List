@@ -7,6 +7,29 @@ var root = document.querySelector(':root');
 const inputStyle = document.getElementById("addTask").style;
 const headerStl = document.getElementById("header").style;
 
+let orderValue = false;
+
+const order = () => {
+    const bfOrder = document.getElementById('before').classList;
+    const afOrder = document.getElementById('after').classList
+
+
+    if (orderValue == true) {
+        orderValue = false
+    } else {
+        orderValue = true
+    }
+
+    var confirmVal = confirm("Are you change the order ?  \n To new list")
+    if (confirmVal == true) {
+        bfOrder.toggle('hide')
+        afOrder.toggle('hide')
+        clearAll()
+    } else {
+        alert("You will be continue")
+    }
+}
+
 function addItem() {
     var task = inValue.value;
 
@@ -20,21 +43,22 @@ function addItem() {
         a.textContent = 'X'
         li.appendChild(a)
 
-        const insertFrist = listGroup.firstElementChild;
-        if (insertFrist == null) {
-            listGroup.appendChild(li)
+        if (orderValue == false) {
+            const insertFrist = listGroup.firstElementChild;
+            if (insertFrist == null) {
+                listGroup.appendChild(li)
+            } else {
+                listGroup.insertBefore(li, insertFrist)
+            }
         } else {
-            listGroup.insertBefore(li, insertFrist)
+            listGroup.appendChild(li)
         }
     }
 
     inValue.value = '';
     inValue.focus()
-
     document.getElementById("count").innerHTML = listGroup.childElementCount;
 }
-
-
 
 let delBtn = document.querySelector('ul');
 delBtn.addEventListener('click', (e) => {
@@ -56,10 +80,8 @@ inValue.addEventListener("keypress", function (event) {
     }
 });
 
-
 function menu() {
     const menuList = document.getElementById('menu-list');
-
     menuList.classList.toggle('hide')
 
 }
@@ -96,5 +118,4 @@ const lightMode = () => {
     headerStl.backgroundColor = ' rgba(255, 136, 0, 0.45)'
 
 }
-
 defaultMode()

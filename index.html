@@ -31,10 +31,17 @@
             </div>
         </div>
 
-        <div class="insert-task">
-            <input type="text" id="addTask" placeholder="Enter your task">
-            <button type="button" onclick="addItem()">
-                <i class="fa-solid fa-plus"></i>
+        <div class="insert-grp">
+            <div class="insert-task">
+                <input type="text" id="addTask" placeholder="Enter your task">
+                <button type="button" onclick="addItem()">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+
+            <button id="order" class="before" onclick="order()">
+                <i id="before" class="fa-solid fa-arrow-up-wide-short "></i>
+                <i id="after" class="fa-solid fa-arrow-down-short-wide hide"></i>
             </button>
         </div>
 

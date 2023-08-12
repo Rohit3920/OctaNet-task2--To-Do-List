@@ -116,14 +116,24 @@ body {
     visibility: hidden;
 }
 
-.container .insert-task {
-    width: fit-content;
+.container .insert-grp{
+    width: 25em;
+    height: fit-content;
     margin: 1.8em;
+
+}
+
+.container .insert-task {
+    width: 20em;
+    height: 40px;
+    float: left;
     border: 1px solid #ff6702;
     border-radius: 8px;
 }
 
 .container .insert-task input {
+    width: 85%;
+    float: left;
     font-size: 20px;
     padding: 8px 12px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -133,12 +143,27 @@ body {
 }
 
 .container .insert-task button {
+    width: 15%;
+    float: left;
     background-color: #0291ff;
     color: var(--bgColor);
     font-size: 20px;
     padding: 8px 12px;
     border: none;
     border-radius: 0 8px 8px 0;
+}
+
+#order{
+    width: 10%;
+    float: left;
+    color: var(--txtColor);
+    display: flex;
+    font-size: 20px;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    border-radius: 4px;
+    opacity: 0.5;
 }
 
 .box {

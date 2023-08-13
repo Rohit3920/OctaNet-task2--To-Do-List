@@ -1,10 +1,10 @@
 :root {
     --txtColor: #000000;
-                                      /* var(--txtColor) */
+    /* var(--txtColor) */
     --bgColor: #ffffff;
-                                          /* var(--bgColor) */
+    /* var(--bgColor) */
     --borColor: #ffffff;
-                                            /* var(--borColor) */
+    /* var(--borColor) */
 }
 
 * {
@@ -47,7 +47,7 @@ body {
 }
 
 .header h1 {
-    width: 80%;
+    width: 70%;
     float: left;
     text-align: center;
     color: var(--txtColor);
@@ -116,18 +116,17 @@ body {
     visibility: hidden;
 }
 
-.container .insert-grp{
-    width: 25em;
+.container .insert-grp {
+    width: 50%;
     height: fit-content;
     margin: 1.8em;
 
 }
 
 .container .insert-task {
-    width: 20em;
+    width: 80%;
     height: 40px;
     float: left;
-    border: 1px solid #ff6702;
     border-radius: 8px;
 }
 
@@ -153,7 +152,7 @@ body {
     border-radius: 0 8px 8px 0;
 }
 
-#order{
+#order {
     width: 10%;
     float: left;
     color: var(--txtColor);
@@ -218,11 +217,45 @@ body {
     padding: 8px;
     font-size: 20px;
     border: 1px solid orangered;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: orangered;
     color: var(--bgColor);
 }
 
 .btn-group button:hover {
-    border-color: var(--bgColor);
+    color: var(--txtColor);
+    border-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container .insert-task input {
+        width: 80%;
+        font-size: 18px;
+        padding: 8px 8px;
+        outline: none;
+        border: none;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .container .insert-task button {
+        width: 20%;
+        float: left;
+        font-size: 18px;
+        padding: 8px 4px;
+        border: none;
+        border-radius: 0 8px 8px 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container .insert-grp {
+            width: 80%;
+        }
+
+        @media only screen and (max-width: 428px) {
+            .container {
+                width: 80%;
+            }
+        }
+    }
 }
